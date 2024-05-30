@@ -1,0 +1,146 @@
+Musique
+estce que cest possible de faire une
+calculatrice dans un moteur graphique de
+jeux
+vidéo cest parti la première chose à
+faire ce sera de choisir un moteur
+graphique de jeux vidéo et pour ma part
+jai choisi le Godot engine parce que
+grosso modo cest Unity mais en plus
+simple et en open source ensuite il
+faudra créer des graphismes et pour ça
+jai choisi libre sprit cest un
+logiciel qui a été fait sur
+et qui a pour but de créer rapidement et
+simplement des graphismes en time map
+dailleurs le Time map parlonsen en
+fait pour faire ma calculatrice étant
+donné que je suis dans un moteur de jeu
+vidéo je vais avoir besoin de deux
+éléments le premier ça va être une
+caméra afin davoir une scène et le
+deième ça va être un time
+map ça cest lintégralité des
+graphismes de Super Mario Bros 1 et
+cest également un T map en fait cest
+un fichier quon peut quadriller
+découper et réassembler pour avoir de
+nouvelles formes et cest exactement ce
+que je mapête à faire mais avec pour
+but de recopier toutes les touches et
+lécran dune
+Musique
+calculatrice et voilà en quelques
+minutes jai pu créer lintégralité de
+mes touches elles sont cohérentes elles
+ont une sorte de direction artistique
+commune et je peux enfin les assembler
+comme un Lego dans Godot il est temps
+maintenant de coder et notre toute
+première fonction elle va servir à
+savoir où se situe la souris sur lapp
+et sur quel bouton elle se situe si on
+reprend mon fichier PNG qui contient
+toutes mes touches mes opérateurs et
+lécran de la calculatrice on peut se
+rendre compte que le T est réparti sur
+quatre lignes la première pour les
+nombres la deuxème pour les opérateurs
+la trème pour lécran et la 4è pour la
+lpiot en fait chaque tuile correspond à
+des coordonnées par exemple cette tuile
+correspond au coordonnées vecteur 0 2 et
+représente le chiffre
+3 je vais alors faire une autre fonction
+qui va déterminer sur quelle touche on
+se sit
+donc en déterminant sur quelle ligne du
+Tet on est on peut savoir si on est sur
+un chiffre un opérateur ou sur lécran à
+partir de maintenant on doit créer de la
+mémoire à notre calculatrice cestàdire
+de faire comprendre à lordinateur
+questce quil doit retenir et
+questce quil doit pas
+retenir il est 15h8 et le débis passe
+bien se passe très bien la calculatrice
+a sa petite anuation qui fonctionne
+juste ici et surtout le plus important
+pour une calculette on arrive à rentrer
+en mémoire les chiffres quon vient
+quon vient déclarer sur la calculatrice
+donc 23 hop 23 rentre bien en mémoire en
+tant que chiffre donc maintenant il ne
+manque plus quà faire les opérations
+plus moins fois et divisé et on aura
+déjà fait une partie du du
+problème pour ça il me suffit simplement
+de faire une fonction qui au clic détecé
+sur lopérateur par exemple plus prend
+laavantdernière et la dernière valeur de
+ma mémoire et les
+additionne il faut maintenant que je
+fasse un affichage pour ma calculatrice
+pour ça je place une valise de texte au
+niveau de lécran de la calculette je
+prends une police qui est vachement
+adaptée à mon projet et je fais
+continuellement afficher sur lécran la
+dernière valeur dans la mémoire de la
+calculatrice ok la calculatrice
+fonctionne elle prend bien en compte les
+additions les multiplications et les
+divisions on a un retour qui est
+fonctionnel il me manque trois choses la
+première cest utiliser à 100 le T map
+cestàdire le pourquoi du comment jai
+fait ma calculatrice sur un logiciel
+dédition de jeu vidéo le but cest
+comme vous laurez peutêtre compris que
+les boutons ne sont pas fixes ils
+peuvent être bouger déplacé et ils vont
+toujours correspondre aux mêmes
+fonctions donc je peux maintenant créer
+un système qui quand une touche est
+appuyée place aléatoirement les 19
+autres touches jai appelé ça le mode
+speedrun et cette fonction qui sert
+uniquement à mettre le gros désordre
+dans toutes les touches de la
+calculatrice montre une chose cest la
+force du Time map parce que peu importe
+la position des touches grâce à la
+méthode de fonctionnement du Time map la
+calculatrice reste
+fonctionnelle la deuxième cest une
+méthode propre pour fermer lapplication
+et ça cest juste une très simple
+fonction qui vient derrière le bouton
+off quand vous appuyez sur le bouton off
+lapplication se faire la troisème cest
+une fonction qui permet déépasser toutes
+les variables et notamment la mémoire de
+la calculatrice et de cette manière
+lutilisateur peut repartir de zéro sans
+fermer et réouvrir le
+logiciel et
+voilà il est 20h30 et la calculatrice
+est entièrement finie le mode speedrun
+avec un panneau de victoire est fini
+elle est fonctionnelle sur tous les
+calculs que jai fait il peut y avoir
+des erreurs mais ce sera des cas
+particuliers et la voici exporter en
+format
+Mac et elle marche
+totalement les calculs les additions
+même dans les chiffres négatifs marchent
+il sont correctement affichés et le mode
+speedrun est fonctionnel
+9
+plus
+6 é
+15 voilà je suis très content cest un
+projet réussi avant lheure on se
+rapproche de plus en plus de du
+jeu

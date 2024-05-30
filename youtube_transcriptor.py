@@ -42,6 +42,12 @@ def get_transcript(transcript_list, language_code):
         print(f"An error occurred while fetching the transcript: {e}")
         return None
 
+def clean_text(text):
+    # Remove extra whitespace and unwanted symbols but keep accent characters
+    cleaned_text = re.sub(r'[^\w\sÀ-ÿ]+', '', text)
+    cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
+    return cleaned_text
+
 def main():
     input_url = input("Enter the YouTube URL: ")
     print(f"Fetching transcript info for URL: {input_url}")
@@ -53,13 +59,26 @@ def main():
         language_code = input("Enter the language code you want to use: ")
         if language_code in available_languages:
             print(f"Fetching transcript in {language_code}...")
-            
+
             # Get the transcript in the chosen language
             transcript = get_transcript(transcript_list, language_code)
             if transcript:
                 print(f"Transcript in {language_code}:")
+                transcript_text = ""
                 for entry in transcript:
-                    print(f"{entry['start']}s - {entry['duration']}s: {entry['text']}")
+                    cleaned_text = clean_text(entry['text'])
+                    print(cleaned_text)
+                    transcript_text += cleaned_text + "\n"
+                
+                save_to_file = input("Do you want to save the transcript to a text file? (yes/no): ").lower()
+                if save_to_file == 'yes':
+                    file_name = input("Enter the filename (with .txt extension): ")
+                    try:
+                        with open(file_name, 'w', encoding='utf-8') as file:
+                            file.write(transcript_text)
+                        print(f"Transcript saved to {file_name}")
+                    except Exception as e:
+                        print(f"An error occurred while saving the file: {e}")
         else:
             print(f"Invalid language code: {language_code}")
     else:
